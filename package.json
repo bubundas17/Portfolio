@@ -11,10 +11,13 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt": "^1.0.0",
+    "@nuxtjs/axios": "^5.0.0",
     "express": "^4.15.3",
-    "vuetify": "^0.17.3",
-    "@nuxtjs/axios": "^5.0.0"
+    "fs": "0.0.1-security",
+    "nuxt": "^1.0.0",
+    "particles.js": "^2.0.0",
+    "vue-particles": "^1.0.9",
+    "vuetify": "^1.0.10"
   },
   "devDependencies": {
     "cross-env": "^5.0.1",
