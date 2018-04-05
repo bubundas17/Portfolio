@@ -1,9 +1,14 @@
 # Portfolio
 
-> My Simple Portfolio Website.  
+> Source code of bubundas.com.  
+> Feel free to use and modify it as your needs. 
+> Credits Are Appreciated! You Can leave a backlink to [bubundas.com](https://bubundas.com "Bubun Das") somewhere in your website. 
+
 
 ## Build Setup
 ``` bash
+# Install Latest Version Of Node.js And Yarn Packege Manager.
+
 # install dependencies
 $ yarn install
 
