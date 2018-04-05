@@ -22,14 +22,14 @@
                   <div>
                     <h1 class="mb-4">About Me</h1>
                     <span class="body-2 mb-2">
-                    Hi, Myself Bubun, a Web Developer from West Bengal, India. I mostly code for Web Applications.
-                    I have a grate interest in programming and latest tech. I write code and build something new every single day!
+                    Hi, i'm Bubun, a Web Developer from West Bengal, India. I mostly code for web applications.
+                    I have a great interest in programming and latest tech. I write code and build something new every single day!
                   </span>
                     <span class="body-2">
                     And yes, If you want to see some of the projects made by me, You can check the "Showcase" Area Of this Site. See you There!
                   </span>
                     <span class="body-2">
-                      And Yes, If want to hair me, Please Use The Contact Me Section.
+                      And Yes, If want to hear from me, please use the Contact Me section.
                     </span>
                   </div>
                 </v-card-title>
@@ -63,10 +63,10 @@
           </v-flex>
           <v-flex xs12>
             <v-container fluid align-center>
-              <v-btn dark color="orange darken-4"> <v-icon left>mdi-phone-outgoing</v-icon> Phone</v-btn>
-              <v-btn dark color="teal darken-2"> <v-icon left>mdi-at</v-icon> Email</v-btn>
-              <v-btn dark color="blue darken-4"> <v-icon left>mdi-facebook</v-icon> Facebook</v-btn>
-              <v-btn dark color="black"> <v-icon left>mdi-github-circle</v-icon> GitHub</v-btn>
+              <a href="tel:+919093769664"><v-btn dark color="orange darken-4"> <v-icon left>mdi-phone-outgoing</v-icon> Phone</v-btn></a>
+              <a href="mailto:hello@bubundas.com"><v-btn dark color="teal darken-2"> <v-icon left>mdi-at</v-icon> Email</v-btn></a>
+              <a href="https://fb.me/bubundas17" target="_blank"><v-btn dark color="blue darken-4"> <v-icon left>mdi-facebook</v-icon> Facebook</v-btn></a>
+              <a href="https://github.com/bubundas17" target="_blank"><v-btn dark color="black"> <v-icon left>mdi-github-circle</v-icon> GitHub</v-btn></a>
             </v-container>
           </v-flex>
         </v-layout>
@@ -101,6 +101,7 @@
       }
     },
     mounted() {
+
       if (typeof window !== 'undefined') {
         particlesJS('particles-js', {
           "particles": {
@@ -156,12 +157,21 @@
         });
       }
     },
-
+    head () {
+      return {
+        title: "Bubun Das",
+        meta: [
+          { hid: 'description', name: 'description', content: 'Bubun\'s Personal Website'  }
+        ]
+      }
+    }
 
   }
 </script>
 <style scoped>
-
+ a{
+   text-decoration: none;
+ }
   span{
     display: block;
   }

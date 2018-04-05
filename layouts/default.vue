@@ -24,7 +24,7 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-toolbar fixed app :clipped-left="clipped" class="primary" dark>
+    <v-toolbar fixed app :clipped-left="clipped" class="navbar" dark>
       <v-toolbar-side-icon @click="drawer = !drawer" class="hidden-md-and-up"/>
       <v-toolbar-title v-text="title"/>
       <v-spacer/>
@@ -48,7 +48,7 @@
         items: [
           {icon: 'mdi-home', title: 'Home', to: '/'},
           {icon: 'mdi-eye-outline', title: 'Showcase', to: '/showcase'},
-          {icon: 'mdi-contact-mail', title: 'Contact', to: '/contact'},
+          {icon: 'mdi-contact-mail', title: 'Contact Me', to: '/contact'},
           {icon: 'mdi-rss', title: 'Blog', to: '/blog'},
         ],
         miniVariant: false,

@@ -1,9 +1,8 @@
-# Portfollio
+# Portfolio
 
-> My astonishing Nuxt.js project
+> My Simple Portfolio Website.  
 
 ## Build Setup
-
 ``` bash
 # install dependencies
 $ yarn install

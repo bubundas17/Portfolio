@@ -12,3 +12,4 @@ dist
 
 # Packege manager
 package-lock.json
+yarn.lock

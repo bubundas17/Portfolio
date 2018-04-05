@@ -9,7 +9,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    title: "Bubun Das",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -53,6 +53,7 @@ module.exports = {
   ** Axios module configuration
   */
   axios: {
+    BaseURL: "https://bubundas.com"
     // See https://github.com/nuxt-community/axios-module#options
   },
 
