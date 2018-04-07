@@ -1,25 +1,26 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const mongoosePaginate = require('mongoose-paginate');
 
-const modelSchema = new Schema({
+const Schema = new mongoose.Schema({
   name: {
     type: String,
-    required: true,
+    min: 1,
+    required: true
   },
-  email: {type: String},
   username: {
     type: String,
-    required: true,
+    min: 6,
+    unique: true
   },
+  email: {type: String, required: true},
   password: {
     type: String,
-    required: true,
+    required: true
   },
   salt: {
-    type: String,
-    required: true,
+    type: String
   },
-  isAdmin: Boolean
+  isAdmin: {type: Boolean, default: false}
 });
-
-module.exports = mongoose.model('User', modelSchema);
+Schema.plugin(mongoosePaginate);
+module.exports = mongoose.model('User', Schema);

@@ -39,6 +39,9 @@ module.exports = {
   */
   plugins: [
     '@/plugins/vuetify',
+    '@/plugins/alerts',
+    '@/plugins/user',
+    '@/plugins/components',
   ],
 
   /*
@@ -46,14 +49,14 @@ module.exports = {
   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
   ],
 
   /*
   ** Axios module configuration
   */
   axios: {
-    BaseURL: "https://bubundas.com"
+    prefix: "/api/v1/",
     // See https://github.com/nuxt-community/axios-module#options
   },
 
@@ -61,6 +64,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    publicPath: "/assets/",
     /*
     ** You can extend webpack config here
     */

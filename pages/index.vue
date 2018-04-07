@@ -15,9 +15,9 @@
     <v-layout wrap row class="blue-grey lighten-5">
       <v-container>
         <v-layout wrap row class="mt-5">
-          <v-flex xs12 sm12 md4 lg4>
+          <v-flex d-flex xs12 sm12 md4 lg4>
             <v-container>
-              <v-card tile flat class="transparent">
+              <v-card tile flat class="transparent-about">
                 <v-card-title>
                   <div>
                     <h1 class="mb-4">About Me</h1>
@@ -96,7 +96,7 @@
           {key: "Age", value: "18 Years"},
           {key: "Phone", value: "+91-9093-7696-64"},
           {key: "Email", value: "hello@bubundas.com"},
-          {key: "Address", value: "North 24 Pgs, West Bengal, India"},
+          {key: "Address", value: "North 24 PGS, West Bengal, India"},
         ]
       }
     },
@@ -169,6 +169,9 @@
   }
 </script>
 <style scoped>
+  .transparent-about{
+    background: rgba(2, 24, 48, 0) !important;
+  }
  a{
    text-decoration: none;
  }
