@@ -17,11 +17,24 @@
               <h2 class="title">{{ user.name }}</h2>
             </v-list-tile-title>
             <v-list-tile-sub-title>
-              Server Admin
+              {{ user.isAdmin ? "Server Admin" : "Rebutted Member"}}
             </v-list-tile-sub-title>
           </v-list-tile-content>
+          <v-list-tile-action v-if="user.isAdmin">
+            <v-tooltip bottom>
+              <v-btn icon to="/admin" slot="activator">
+                <v-icon>settings</v-icon>
+              </v-btn>
+              <span>Admin Panel</span>
+            </v-tooltip>
+          </v-list-tile-action>
           <v-list-tile-action>
-            <v-btn icon :loading="loading" @click="logout"><v-icon>exit_to_app</v-icon></v-btn>
+            <v-tooltip bottom>
+              <v-btn icon :loading="loading" @click="logout" slot="activator">
+                <v-icon>exit_to_app</v-icon>
+              </v-btn>
+              <span>Logout</span>
+            </v-tooltip>
           </v-list-tile-action>
         </v-list-tile>
       </v-list>

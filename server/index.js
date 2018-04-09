@@ -49,7 +49,7 @@ passport.use(new LocalStrategy(
     } catch (e) {
       done("Something Went Wrong", null);
     }
-    done("Invalid Username Or Password", null);
+    done("User Not Found!", null);
   }
 ));
 
