@@ -17,11 +17,8 @@ module.exports = {
   // Password Hashing Algorithm
   hashPassword(password, salt) {
     const sha256pass = sha512(password + salt).toString();
-    const md5pass = md5(salt + password).toString();
     // returning super secure hashed password
-    return sha512(sha256pass + salt).toString().slice(0, -6)
-      + sha512(md5pass + salt).toString().slice(0, -5)
-      + sha512(sha256pass + md5pass).toString().slice(0, -8);
+    return sha512(sha256pass + password).toString().slice(0, -6)
   },
 
   // Checking Password from Database
