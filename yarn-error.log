@@ -1,14 +1,14 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js generate
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js build
 
 PATH: 
-  C:\Python36\Scripts\;C:\Python36\;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\platform-tools;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;%M2_HOME%\bin;C:\Program Files (x86)\Nmap;C:\Users\Bubun\AppData\Local\Microsoft\WindowsApps;C:\Users\Bubun\AppData\Roaming\npm;C:\Users\Bubun\AppData\Local\Yarn\bin;C:\Program Files\Heroku\bin;C:\Program Files (x86)\Nmap
+  C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\nodejs\;C:\Program Files\adb;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Yarn\bin\;C:\Users\Bubun Das\AppData\Local\Microsoft\WindowsApps;C:\Users\Bubun Das\AppData\Roaming\npm;C:\Users\Bubun Das\AppData\Local\Yarn\bin
 
 Yarn version: 
   1.5.1
 
 Node version: 
-  9.9.0
+  9.11.1
 
 Platform: 
   win32 x64
@@ -16,7 +16,7 @@ Platform:
 npm manifest: 
   {
     "name": "Portfollio",
-    "version": "1.0.0",
+    "version": "0.1-alpha",
     "description": "My astonishing Nuxt.js project",
     "author": "Bubun Das",
     "private": true,
@@ -34,15 +34,21 @@ npm manifest:
       "express": "^4.15.3",
       "express-session": "^1.15.6",
       "fs": "0.0.1-security",
+      "jquery": "^3.3.1",
       "mongoose": "^5.0.13",
       "mongoose-paginate": "^5.0.3",
       "nuxt": "^1.0.0",
       "particles.js": "^2.0.0",
       "passport": "^0.4.0",
       "passport-local": "^1.0.0",
+      "quill": "^1.3.6",
+      "quill-image-drop-module": "^1.0.3",
+      "quill-image-resize-module": "^3.0.0",
+      "vue": "latest",
       "vue-particles": "^1.0.9",
+      "vue-quill-editor": "^3.0.6",
       "vuetify": "^1.0.10",
-      "vue": "latest"
+      "webpack": "^4.5.0"
     },
     "devDependencies": {
       "cross-env": "^5.0.1",
@@ -100,6 +106,12 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/acorn-dynamic-import/-/acorn-dynamic-import-2.0.2.tgz#c752bd210bef679501b6c6cb7fc84f8f47158cc4"
     dependencies:
       acorn "^4.0.3"
+  
+  acorn-dynamic-import@^3.0.0:
+    version "3.0.0"
+    resolved "https://registry.yarnpkg.com/acorn-dynamic-import/-/acorn-dynamic-import-3.0.0.tgz#901ceee4c7faaef7e07ad2a47e890675da50a278"
+    dependencies:
+      acorn "^5.0.0"
   
   acorn@^4.0.3:
     version "4.0.13"
@@ -1281,6 +1293,10 @@ Lockfile:
     version "1.0.1"
     resolved "https://registry.yarnpkg.com/chownr/-/chownr-1.0.1.tgz#e2a75042a9551908bebd25b8523d5f9769d79181"
   
+  chrome-trace-event@^0.1.1:
+    version "0.1.2"
+    resolved "https://registry.yarnpkg.com/chrome-trace-event/-/chrome-trace-event-0.1.2.tgz#90f36885d5345a50621332f0717b595883d5d982"
+  
   cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
     version "1.0.4"
     resolved "https://registry.yarnpkg.com/cipher-base/-/cipher-base-1.0.4.tgz#8760e4ecc272f4c363532f926d874aae2c1397de"
@@ -1832,6 +1848,10 @@ Lockfile:
     version "0.2.0"
     resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
   
+  deep-equal@^1.0.1:
+    version "1.0.1"
+    resolved "https://registry.yarnpkg.com/deep-equal/-/deep-equal-1.0.1.tgz#f5d260292b660e084eff4cdbc9f08ad3247448b5"
+  
   deep-extend@~0.4.0:
     version "0.4.2"
     resolved "https://registry.yarnpkg.com/deep-extend/-/deep-extend-0.4.2.tgz#48b699c27e334bf89f10892be432f6e4c7d34a7f"
@@ -2041,6 +2061,14 @@ Lockfile:
       object-assign "^4.0.1"
       tapable "^0.2.7"
   
+  enhanced-resolve@^4.0.0:
+    version "4.0.0"
+    resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-4.0.0.tgz#e34a6eaa790f62fccd71d93959f56b2b432db10a"
+    dependencies:
+      graceful-fs "^4.1.2"
+      memory-fs "^0.4.0"
+      tapable "^1.0.0"
+  
   entities@~1.1.1:
     version "1.1.1"
     resolved "https://registry.yarnpkg.com/entities/-/entities-1.1.1.tgz#6e5c2d0a5621b5dadaecef80b90edfb5cd7772f0"
@@ -2141,6 +2169,13 @@ Lockfile:
       esrecurse "^4.1.0"
       estraverse "^4.1.1"
   
+  eslint-scope@^3.7.1:
+    version "3.7.1"
+    resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-3.7.1.tgz#3d63c3edfda02e06e01a452ad88caacc7cdcb6e8"
+    dependencies:
+      esrecurse "^4.1.0"
+      estraverse "^4.1.1"
+  
   esprima@^2.6.0:
     version "2.7.3"
     resolved "https://registry.yarnpkg.com/esprima/-/esprima-2.7.3.tgz#96e3b70d5779f6ad49cd032673d1c312767ba581"
@@ -2189,6 +2224,10 @@ Lockfile:
   eventemitter3@1.x.x:
     version "1.2.0"
     resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-1.2.0.tgz#1c86991d816ad1e504750e73874224ecf3bec508"
+  
+  eventemitter3@^2.0.3:
+    version "2.0.3"
+    resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-2.0.3.tgz#b5e1079b59fb5e1ba2771c0a993be060a58c99ba"
   
   events@^1.0.0:
     version "1.1.1"
@@ -2299,7 +2338,7 @@ Lockfile:
       assign-symbols "^1.0.0"
       is-extendable "^1.0.1"
   
-  extend@~3.0.0:
+  extend@^3.0.1, extend@~3.0.0:
     version "3.0.1"
     resolved "https://registry.yarnpkg.com/extend/-/extend-3.0.1.tgz#a755ea7bc1adfcc5a31ce7e762dbaadc5e636444"
   
@@ -2350,6 +2389,10 @@ Lockfile:
   fast-deep-equal@^1.0.0:
     version "1.1.0"
     resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-1.1.0.tgz#c053477817c86b51daa853c81e059b733d023614"
+  
+  fast-diff@1.1.2:
+    version "1.1.2"
+    resolved "https://registry.yarnpkg.com/fast-diff/-/fast-diff-1.1.2.tgz#4b62c42b8e03de3f848460b639079920695d0154"
   
   fast-json-stable-stringify@^2.0.0:
     version "2.0.0"
@@ -3240,6 +3283,10 @@ Lockfile:
     version "0.1.2"
     resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
   
+  jquery@^3.3.1:
+    version "3.3.1"
+    resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
+  
   js-base64@^2.1.9:
     version "2.4.3"
     resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.4.3.tgz#2e545ec2b0f2957f41356510205214e98fad6582"
@@ -3591,6 +3638,24 @@ Lockfile:
       regex-not "^1.0.0"
       snapdragon "^0.8.1"
       to-regex "^3.0.1"
+  
+  micromatch@^3.1.8:
+    version "3.1.10"
+    resolved "https://registry.yarnpkg.com/micromatch/-/micromatch-3.1.10.tgz#70859bc95c9840952f359a068a3fc49f9ecfac23"
+    dependencies:
+      arr-diff "^4.0.0"
+      array-unique "^0.3.2"
+      braces "^2.3.1"
+      define-property "^2.0.2"
+      extend-shallow "^3.0.2"
+      extglob "^2.0.4"
+      fragment-cache "^0.2.1"
+      kind-of "^6.0.2"
+      nanomatch "^1.2.9"
+      object.pick "^1.3.0"
+      regex-not "^1.0.0"
+      snapdragon "^0.8.1"
+      to-regex "^3.0.2"
   
   miller-rabin@^4.0.0:
     version "4.0.1"
@@ -4182,6 +4247,10 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/param-case/-/param-case-2.1.1.tgz#df94fd8cf6531ecf75e6bef9a0858fbc72be2247"
     dependencies:
       no-case "^2.2.0"
+  
+  parchment@^1.1.4:
+    version "1.1.4"
+    resolved "https://registry.yarnpkg.com/parchment/-/parchment-1.1.4.tgz#aeded7ab938fe921d4c34bc339ce1168bc2ffde5"
   
   parse-asn1@^5.0.0:
     version "5.1.0"
@@ -5003,6 +5072,39 @@ Lockfile:
     version "0.2.0"
     resolved "https://registry.yarnpkg.com/querystring/-/querystring-0.2.0.tgz#b209849203bb25df820da756e747005878521620"
   
+  quill-delta@^3.6.2:
+    version "3.6.2"
+    resolved "https://registry.yarnpkg.com/quill-delta/-/quill-delta-3.6.2.tgz#76eed0163b8b09a076fba6ade29307c42b40b8d8"
+    dependencies:
+      deep-equal "^1.0.1"
+      extend "^3.0.1"
+      fast-diff "1.1.2"
+  
+  quill-image-drop-module@^1.0.3:
+    version "1.0.3"
+    resolved "https://registry.yarnpkg.com/quill-image-drop-module/-/quill-image-drop-module-1.0.3.tgz#0e5ec8329dd67a12126f166b191bf64d2057a7d3"
+    dependencies:
+      quill "^1.2.2"
+  
+  quill-image-resize-module@^3.0.0:
+    version "3.0.0"
+    resolved "https://registry.yarnpkg.com/quill-image-resize-module/-/quill-image-resize-module-3.0.0.tgz#0fd93746a837336d95b2f536140416a623c71771"
+    dependencies:
+      lodash "^4.17.4"
+      quill "^1.2.2"
+      raw-loader "^0.5.1"
+  
+  quill@^1.2.2, quill@^1.3.4, quill@^1.3.6:
+    version "1.3.6"
+    resolved "https://registry.yarnpkg.com/quill/-/quill-1.3.6.tgz#99f4de1fee85925a0d7d4163b6d8328f23317a4d"
+    dependencies:
+      clone "^2.1.1"
+      deep-equal "^1.0.1"
+      eventemitter3 "^2.0.3"
+      extend "^3.0.1"
+      parchment "^1.1.4"
+      quill-delta "^3.6.2"
+  
   random-bytes@~1.0.0:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/random-bytes/-/random-bytes-1.0.0.tgz#4f68a1dc0ae58bd3fb95848c30324db75d64360b"
@@ -5039,6 +5141,10 @@ Lockfile:
       http-errors "1.6.2"
       iconv-lite "0.4.19"
       unpipe "1.0.0"
+  
+  raw-loader@^0.5.1:
+    version "0.5.1"
+    resolved "https://registry.yarnpkg.com/raw-loader/-/raw-loader-0.5.1.tgz#0c3d0beaed8a01c966d9787bf778281252a979aa"
   
   rc@^1.0.1, rc@^1.1.6, rc@^1.1.7:
     version "1.2.6"
@@ -5383,7 +5489,7 @@ Lockfile:
     dependencies:
       ajv "^5.0.0"
   
-  schema-utils@^0.4.0, schema-utils@^0.4.5:
+  schema-utils@^0.4.0, schema-utils@^0.4.2, schema-utils@^0.4.5:
     version "0.4.5"
     resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-0.4.5.tgz#21836f0608aac17b78f9e3e24daff14a5ca13a3e"
     dependencies:
@@ -5858,6 +5964,10 @@ Lockfile:
     version "0.2.8"
     resolved "https://registry.yarnpkg.com/tapable/-/tapable-0.2.8.tgz#99372a5c999bf2df160afc0d74bed4f47948cd22"
   
+  tapable@^1.0.0:
+    version "1.0.0"
+    resolved "https://registry.yarnpkg.com/tapable/-/tapable-1.0.0.tgz#cbb639d9002eed9c6b5975eb20598d7936f1f9f2"
+  
   tar-pack@^3.4.0:
     version "3.4.1"
     resolved "https://registry.yarnpkg.com/tar-pack/-/tar-pack-3.4.1.tgz#e1dbc03a9b9d3ba07e896ad027317eb679a10a1f"
@@ -5933,7 +6043,7 @@ Lockfile:
       is-number "^3.0.0"
       repeat-string "^1.6.1"
   
-  to-regex@^3.0.1:
+  to-regex@^3.0.1, to-regex@^3.0.2:
     version "3.0.2"
     resolved "https://registry.yarnpkg.com/to-regex/-/to-regex-3.0.2.tgz#13cfdd9b336552f30b51f33a8ae1b42a7a7599ce"
     dependencies:
@@ -6026,7 +6136,7 @@ Lockfile:
       uglify-js "^2.8.29"
       webpack-sources "^1.0.1"
   
-  uglifyjs-webpack-plugin@^1.1.8:
+  uglifyjs-webpack-plugin@^1.1.8, uglifyjs-webpack-plugin@^1.2.4:
     version "1.2.4"
     resolved "https://registry.yarnpkg.com/uglifyjs-webpack-plugin/-/uglifyjs-webpack-plugin-1.2.4.tgz#5eec941b2e9b8538be0a20fc6eda25b14c7c1043"
     dependencies:
@@ -6275,6 +6385,13 @@ Lockfile:
       particles.js "^2.0.0"
       vue "^2.2.6"
   
+  vue-quill-editor@^3.0.6:
+    version "3.0.6"
+    resolved "https://registry.yarnpkg.com/vue-quill-editor/-/vue-quill-editor-3.0.6.tgz#1f85646211d68a31a80a72cb7f45bb2f119bc8fb"
+    dependencies:
+      object-assign "^4.1.1"
+      quill "^1.3.4"
+  
   vue-router@^3.0.1:
     version "3.0.1"
     resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.0.1.tgz#d9b05ad9c7420ba0f626d6500d693e60092cc1e9"
@@ -6310,7 +6427,7 @@ Lockfile:
     version "1.6.0"
     resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.6.0.tgz#dc42697133302ce3017524356a6c61b7b69b4a18"
   
-  vue@^2.2.6, vue@^2.5.13:
+  vue@^2.2.6, vue@^2.5.13, vue@latest:
     version "2.5.16"
     resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.16.tgz#07edb75e8412aaeed871ebafa99f4672584a0085"
   
@@ -6322,7 +6439,7 @@ Lockfile:
     version "3.0.1"
     resolved "https://registry.yarnpkg.com/vuex/-/vuex-3.0.1.tgz#e761352ebe0af537d4bb755a9b9dc4be3df7efd2"
   
-  watchpack@^1.4.0:
+  watchpack@^1.4.0, watchpack@^1.5.0:
     version "1.5.0"
     resolved "https://registry.yarnpkg.com/watchpack/-/watchpack-1.5.0.tgz#231e783af830a22f8966f65c4c4bacc814072eed"
     dependencies:
@@ -6414,6 +6531,30 @@ Lockfile:
       watchpack "^1.4.0"
       webpack-sources "^1.0.1"
       yargs "^8.0.2"
+  
+  webpack@^4.5.0:
+    version "4.5.0"
+    resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.5.0.tgz#1e6f71e148ead02be265ff2879c9cd6bb30b8848"
+    dependencies:
+      acorn "^5.0.0"
+      acorn-dynamic-import "^3.0.0"
+      ajv "^6.1.0"
+      ajv-keywords "^3.1.0"
+      chrome-trace-event "^0.1.1"
+      enhanced-resolve "^4.0.0"
+      eslint-scope "^3.7.1"
+      loader-runner "^2.3.0"
+      loader-utils "^1.1.0"
+      memory-fs "~0.4.1"
+      micromatch "^3.1.8"
+      mkdirp "~0.5.0"
+      neo-async "^2.5.0"
+      node-libs-browser "^2.0.0"
+      schema-utils "^0.4.2"
+      tapable "^1.0.0"
+      uglifyjs-webpack-plugin "^1.2.4"
+      watchpack "^1.5.0"
+      webpack-sources "^1.0.1"
   
   when@~3.6.x:
     version "3.6.4"
@@ -6552,8 +6693,8 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: C:\Windows\system32\cmd.exe
-  Arguments: /d /s /c nuxt generate
-  Directory: F:\WorkStation\Portfollio
+  Arguments: /d /s /c nuxt build
+  Directory: F:\Work Station\NodeJs\Portfollio
   Output:
   
       at ProcessTermError.MessageError (C:\Program Files (x86)\Yarn\lib\cli.js:186:110)
